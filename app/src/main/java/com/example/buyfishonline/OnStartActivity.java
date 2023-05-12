@@ -23,9 +23,24 @@ public class OnStartActivity extends AppCompatActivity {
 
     private void wireDisplay(){
         signInButton = findViewById(R.id.signInButton);
-        signInButton = findViewById(R.id.signUpButton);
+        signUpButton = findViewById(R.id.signUpButton);
 
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(SignInActivity.intentFactory(getApplicationContext()));
+            }
+        });
 
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(SignUpActivity.intentFactory(getApplicationContext()));
+            }
+        });
     }
 
+    public static Intent intentFactory(Context context){
+        return new Intent(context, OnStartActivity.class);
+    }
 }
