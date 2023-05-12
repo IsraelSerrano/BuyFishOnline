@@ -8,15 +8,21 @@
     <string name="SignInHeader">Enter Credentials Below</string>
 
 
-    //MainActivity strings
+    //LandingActivity strings
+    <string name="BrowseFish">Browse Fish</string>
+    <string name="ViewCart">View Cart</string>
+    <string name="Admin">Admin Options</string>
+    <string name="Logout">Logout</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
 
     //LoginActivity strings
     <string name="Username">Username</string>
     <string name="Password">Password</string>
     <string name="create_new_account_below">Create new account below.</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="logoutButton">Item1</string>
+    <string name="landing_heading">Welcome User</string>
 
-
-    //AdminActivity strings
 
 </resources>

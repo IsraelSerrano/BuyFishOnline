@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPageActivity"
+    android:background="@color/material_dynamic_neutral_variant20"
+    android:theme="@style/Theme.Material3.Dark">
+
+    <TextView
+        android:id="@+id/WelcomUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/landing_heading"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/AdminButton"
+        android:layout_width="225dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/Admin"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/browseButton"
+        android:layout_width="225dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/BrowseFish"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/viewCart"
+        android:layout_width="225dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="140dp"
+        android:text="@string/ViewCart"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/AdminButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
