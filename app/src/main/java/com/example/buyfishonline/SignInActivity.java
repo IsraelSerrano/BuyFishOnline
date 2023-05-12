@@ -54,7 +54,7 @@ public class SignInActivity extends AppCompatActivity {
         mUsername = findViewById(R.id.editTextTextPersonName);
         mPassword = findViewById(R.id.editTextTextPassword);
 
-        mButton = findViewById(R.id.SignIn);
+        mButton = findViewById(R.id.SignUpButton);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
