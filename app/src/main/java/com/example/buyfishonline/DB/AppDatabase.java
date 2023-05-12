@@ -6,12 +6,15 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.buyfishonline.Fish;
 import com.example.buyfishonline.User;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, Fish.class}, version = 3)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "User.DB";
     public static final String USER_TABLE = "USER_TABLE";
+    public static final String FISH_TABLE = "FISH_TABLE";
+    public static final String CART_TABLE = "CART_TABLE";
 
     private static volatile AppDatabase instance;
     private static final Object LOCK = new Object();

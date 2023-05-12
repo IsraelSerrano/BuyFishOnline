@@ -29,6 +29,9 @@
     <string name="CartHeading">Your Fish Bag</string>
     <string name="browseHeading">Welcome To The Fish Market</string>
     <string name="cartView">Cart</string>
+    <string name="fishMarketEditText">Current Fish</string>
+    <string name="fishNameEditText">Enter fish name</string>
+    <string name="addToCartButton">Add To Cart</string>
 
 
 </resources>
