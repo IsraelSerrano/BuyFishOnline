@@ -13,10 +13,12 @@ public class User {
 
     private String mUsername;
     private String mPassword;
+    private boolean mIsAdmin;
 
-    public User(String username, String password) {
+    public User(String username, String password, boolean isAdmin) {
         mUsername = username;
         mPassword = password;
+        mIsAdmin = isAdmin;
     }
 
     public int getUserId() {
@@ -41,5 +43,9 @@ public class User {
 
     public void setPassword(String password) {
         mPassword = password;
+    }
+
+    public boolean isAdmin() {
+        return mIsAdmin;
     }
 }

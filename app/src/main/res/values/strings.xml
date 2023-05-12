@@ -23,6 +23,12 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="logoutButton">Item1</string>
     <string name="landing_heading">Welcome User</string>
+    <string name="adminSettingsHeading">Admin Settings</string>
+    <string name="removeUserButton">Remove User</string>
+    <string name="addUserButton">Add User</string>
+    <string name="CartHeading">Your Fish Bag</string>
+    <string name="browseHeading">Welcome To The Fish Market</string>
+    <string name="cartView">Cart</string>
 
 
 </resources>

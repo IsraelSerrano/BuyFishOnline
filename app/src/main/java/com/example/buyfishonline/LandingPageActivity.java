@@ -51,31 +51,37 @@ public class LandingPageActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void wireDisplay(){
         mWelcomeTextView = findViewById(R.id.WelcomUser);
-        mUserId =  getIntent().getIntExtra(USER_ID_KEY, -1);
-        mWelcomeTextView.setText("Welcome " + mUserDAO.getUserByUserId(mUserId).getUsername());
+        User user = mUserDAO.getUserByUserId(getIntent().getIntExtra(USER_ID_KEY, -1));
+        mWelcomeTextView.setText("Welcome " + user.getUsername());
 
         mBrowseButton = findViewById(R.id.browseButton);
         mViewCartButton = findViewById(R.id.viewCart);
         mAdminButton = findViewById(R.id.AdminButton);
 
+        if(user.isAdmin()){
+            mAdminButton.setVisibility(View.VISIBLE);
+        }else{
+            mAdminButton.setVisibility(View.INVISIBLE);
+        }
+
         mBrowseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(BrowseActivity.intentFactory(getApplicationContext()));
             }
         });
 
         mViewCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(CartActivity.intentFactory(getApplicationContext()));
             }
         });
 
         mAdminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(AdminActivity.intentFactory(getApplicationContext()));
             }
         });
     }
