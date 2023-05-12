@@ -18,4 +18,40 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FishMarketMainDisplay"
+        android:layout_width="334dp"
+        android:layout_height="373dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/fishMarketEditText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/enterFishName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="@string/fishNameEditText"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FishMarketMainDisplay"
+        android:autofillHints="Enter fish name" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="161dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/addToCartButton"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterFishName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

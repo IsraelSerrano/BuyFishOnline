@@ -6,6 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.example.buyfishonline.Fish;
 import com.example.buyfishonline.User;
 
 import java.util.List;
@@ -29,4 +30,16 @@ public interface UserDAO {
 
     @Query("SELECT * FROM " + AppDatabase.USER_TABLE + " WHERE mUserId = :userId ")
     User getUserByUserId(int userId);
+
+    @Insert
+    void insert(Fish... fish);
+
+    @Update
+    void update(Fish... fish);
+
+    @Delete
+    void delete(Fish fish);
+
+    @Query("SELECT * FROM " + AppDatabase.FISH_TABLE)
+    List<Fish> getAllFish();
 }
