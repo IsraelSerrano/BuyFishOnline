@@ -44,8 +44,8 @@ public class SignInActivity extends AppCompatActivity {
                 .UserDAO();
         List<User> users = mUserDAO.getAllUsers();
         if(users.isEmpty()){
-            User defaultUser = new User("Iz", "Iz123", true);
-            User altUser = new User("a", "b", false);
+            User defaultUser = new User("admin2", "admin2", true);
+            User altUser = new User("testuser1", "testuser1", false);
             mUserDAO.insert(defaultUser, altUser);
         }
     }

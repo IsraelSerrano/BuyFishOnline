@@ -12,11 +12,15 @@ public class Fish {
     private int mFishId;
 
     private String mFishName;
+    private double mFishPrice;
     private int mFishCount;
 
-    public Fish(String fishName, int fishCount) {
+
+
+    public Fish(String fishName, int fishCount, double fishPrice) {
         mFishName = fishName;
         mFishCount = fishCount;
+        mFishPrice = fishPrice;
     }
 
     public int getFishId() {
@@ -43,10 +47,21 @@ public class Fish {
         mFishCount = fishCount;
     }
 
+    public double getFishPrice() {
+        return mFishPrice;
+    }
+
+    public void setFishPrice(double fishPrice) {
+        mFishPrice = fishPrice;
+    }
+
     public String toString() {
         return "Fish: " + mFishName + "\n" +
                 "Quantity: " + mFishCount + "\n" +
-                "FishId: " + mFishId + "\n" +
+                "Price: " + mFishPrice + "\n" +
+                "Fish Id: " + mFishId + "\n" +
                 "=-=-=-=-=-=-=-=\n";
     }
+
+
 }

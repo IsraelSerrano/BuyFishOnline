@@ -67,14 +67,14 @@ public class LandingPageActivity extends AppCompatActivity {
         mBrowseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(BrowseActivity.intentFactory(getApplicationContext()));
+                startActivity(BrowseActivity.intentFactory(getApplicationContext(), user.getUserId()));
             }
         });
 
         mViewCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(CartActivity.intentFactory(getApplicationContext()));
+                startActivity(CartActivity.intentFactory(getApplicationContext(), user.getUserId()));
             }
         });
 
