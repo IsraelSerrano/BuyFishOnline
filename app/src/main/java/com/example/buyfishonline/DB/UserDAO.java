@@ -6,6 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.example.buyfishonline.Cart;
 import com.example.buyfishonline.Fish;
 import com.example.buyfishonline.User;
 
@@ -42,4 +43,25 @@ public interface UserDAO {
 
     @Query("SELECT * FROM " + AppDatabase.FISH_TABLE)
     List<Fish> getAllFish();
+
+    @Query("SELECT * FROM " + AppDatabase.FISH_TABLE + " WHERE mFishName = :fishName ")
+    Fish getFishByFishName(String fishName);
+    @Query("UPDATE fish_table SET mFishCount = :fishCount WHERE mFishName =:fishName")
+    void update(String fishName, int fishCount);
+
+    @Insert
+    void insert(Cart... carts);
+
+    @Update
+    void update(Cart... cart);
+
+    @Delete
+    void delete(Cart cart);
+
+    @Query("SELECT * FROM " + AppDatabase.CART_TABLE + " WHERE mUsername = :username ")
+    Cart getCartByUsername(String username);
+
+    @Query("UPDATE CART_TABLE SET mFishList = :fishList WHERE mUsername =:username")
+    void update(String username, String fishList);
+
 }

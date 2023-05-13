@@ -5,11 +5,13 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
+import com.example.buyfishonline.Cart;
 import com.example.buyfishonline.Fish;
 import com.example.buyfishonline.User;
 
-@Database(entities = {User.class, Fish.class}, version = 3)
+@Database(entities = {User.class, Fish.class, Cart.class}, version = 5)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "User.DB";
     public static final String USER_TABLE = "USER_TABLE";

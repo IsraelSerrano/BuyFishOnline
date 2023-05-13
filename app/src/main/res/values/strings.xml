@@ -32,6 +32,11 @@
     <string name="fishMarketEditText">Current Fish</string>
     <string name="fishNameEditText">Enter fish name</string>
     <string name="addToCartButton">Add To Cart</string>
+    <string name="removeFishButton">Remove Fish</string>
+    <string name="AddFishButton">Add Fish</string>
+    <string name="enter_fish">Enter Fish</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="check_out">Check Out</string>
 
 
 </resources>
